@@ -18,8 +18,7 @@
   "dependencies": {
     "prosemirror-model": "~0.22.0",
     "prosemirror-schema-basic": "~0.22.0",
-    "prosemirror-schema-list": "~0.22.0",
-    "prosemirror-schema-table": "~0.22.0"
+    "prosemirror-schema-list": "~0.22.0"
   },
   "devDependencies": {
     "buble": "^0.15.1",
