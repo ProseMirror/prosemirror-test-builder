@@ -1,4 +1,4 @@
-const {Node} = require("prosemirror-model")
+import {Node} from "prosemirror-model"
 
 const noTag = Node.prototype.tag = Object.create(null)
 
@@ -79,7 +79,7 @@ function mark(type, attrs) {
   }
 }
 
-module.exports = function(schema, names) {
+export default function(schema, names) {
   let result = {schema}
   for (let name in schema.nodes) result[name] = block(schema.nodes[name], {})
   for (let name in schema.marks) result[name] = mark(schema.marks[name], {})
