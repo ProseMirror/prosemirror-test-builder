@@ -1,6 +1,6 @@
 {
   "name": "prosemirror-test-builder",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Helpers for programatically building ProseMirror test documents",
   "main": "dist/index.js",
   "license": "MIT",
