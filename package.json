@@ -3,7 +3,7 @@
   "version": "1.0.2",
   "description": "Helpers for programatically building ProseMirror test documents",
   "main": "dist/index.js",
-  "module": "dist/index.mjs",
+  "module": "dist/index.es.js",
   "license": "MIT",
   "maintainers": [
     {
