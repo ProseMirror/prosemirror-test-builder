@@ -1,3 +1,9 @@
+## 1.0.3 (2020-01-28)
+
+### Bug fixes
+
+Rename ES module files to use a .js extension, since Webpack gets confused by .mjs
+
 ## 1.0.2 (2019-11-19)
 
 ### Bug fixes
