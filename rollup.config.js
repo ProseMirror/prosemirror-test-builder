@@ -3,13 +3,14 @@ module.exports = {
   output: [{
     file: 'dist/index.js',
     format: 'cjs',
-    sourcemap: true
+    sourcemap: true,
+    exports: "auto"
   }, {
     file: 'dist/index.es.js',
     format: 'es',
-    sourcemap: true
+    sourcemap: true,
+    exports: "auto"
   }],
-  sourcemap: true,
   plugins: [require('@rollup/plugin-buble')()],
   external(id) { return !/^[\.\/]/.test(id) }
 }
