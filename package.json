@@ -16,7 +16,7 @@
     "type": "git",
     "url": "git://github.com/prosemirror/prosemirror-test-builder.git"
   },
-  "dependencies": {
+  "peerDependencies": {
     "prosemirror-model": "^1.0.0",
     "prosemirror-schema-basic": "^1.0.0",
     "prosemirror-schema-list": "^1.0.0"
