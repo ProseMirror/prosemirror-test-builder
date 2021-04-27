@@ -1,6 +1,6 @@
 {
   "name": "prosemirror-test-builder",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Helpers for programatically building ProseMirror test documents",
   "main": "dist/index.js",
   "module": "dist/index.es.js",

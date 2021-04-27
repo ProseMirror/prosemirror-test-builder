@@ -1,3 +1,9 @@
+## 1.0.4 (2021-04-27)
+
+### Bug fixes
+
+Treat ProseMirror libraries as peer dependencies, to avoid duplicate libraries when using this.
+
 ## 1.0.3 (2020-01-28)
 
 ### Bug fixes
