@@ -1,3 +1,9 @@
+## 1.0.5 (2021-10-14)
+
+### Bug fixes
+
+Go back to regular dependencies, so that the package works on NPM <7.
+
 ## 1.0.4 (2021-04-27)
 
 ### Bug fixes
