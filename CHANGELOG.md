@@ -1,3 +1,9 @@
+## 1.0.6 (2022-03-29)
+
+### Bug fixes
+
+Make it possible to specify multiple marks of the same type for a given piece of content.
+
 ## 1.0.5 (2021-10-14)
 
 ### Bug fixes
