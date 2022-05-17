@@ -2,8 +2,15 @@
   "name": "prosemirror-test-builder",
   "version": "1.0.6",
   "description": "Helpers for programatically building ProseMirror test documents",
-  "main": "dist/index.js",
-  "module": "dist/index.es.js",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "import": "./dist/index.js",
+    "require": "./dist/index.cjs"
+  },
+  "sideEffects": false,
   "license": "MIT",
   "maintainers": [
     {
@@ -22,15 +29,11 @@
     "prosemirror-schema-list": "^1.0.0"
   },
   "devDependencies": {
-    "@rollup/plugin-buble": "^0.21.3",
-    "ist": "1.1.7",
-    "mocha": "9.2.2",
-    "rollup": "^2.26.3"
+    "@prosemirror/buildhelper": "^0.1.5",
+    "prosemirror-test-builder": "^1.0.0"
   },
   "scripts": {
-    "test": "mocha test/test-*.js",
-    "build": "rollup -c",
-    "watch": "rollup -c -w",
-    "prepare": "npm run build"
+    "test": "pm-runtests",
+    "prepare": "pm-buildhelper src/index.ts"
   }
 }

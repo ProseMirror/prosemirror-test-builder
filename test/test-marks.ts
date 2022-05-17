@@ -25,7 +25,7 @@ const marks = {
 }
 const schema = new Schema({nodes, marks})
 
-const { doc, p, a } = builders(schema)
+const { doc, p, a } = builders(schema) as any
 
 describe("Multiple marks", () => {
   it("deduplicates identical marks", () => {
