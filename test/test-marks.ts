@@ -1,6 +1,6 @@
-const {builders, eq} = require("..")
-const {Schema} = require("prosemirror-model")
-const ist = require("ist")
+import {builders, eq} from "prosemirror-test-builder"
+import {Schema} from "prosemirror-model"
+import ist from "ist"
 
 // This schema has an "a" mark which doesn't exclude itself
 const nodes = {
