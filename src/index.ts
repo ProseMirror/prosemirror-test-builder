@@ -1,13 +1,12 @@
-import OrderedMap from "orderedmap"
 import {schema as bSchema} from "prosemirror-schema-basic"
 import {addListNodes} from "prosemirror-schema-list"
-import {Schema, NodeSpec} from "prosemirror-model"
+import {Schema} from "prosemirror-model"
 
 import {builders, NodeBuilder, MarkBuilder} from "./build"
 export {builders, NodeBuilder, MarkBuilder} from "./build"
 
 export const schema = new Schema({
-  nodes: addListNodes(bSchema.spec.nodes as OrderedMap<NodeSpec>, "paragraph block*", "block"),
+  nodes: addListNodes(bSchema.spec.nodes, "paragraph block*", "block"),
   marks: bSchema.spec.marks
 })
 

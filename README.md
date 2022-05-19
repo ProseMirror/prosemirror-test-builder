@@ -18,10 +18,8 @@ Node builder functions optionally take an attribute object as their
 first argument, followed by zero or more child nodes, and return a
 node with those attributes and children. Children should be either
 strings (for text nodes), existing nodes, or the result of calling a
-mark builder. For leaf nodes, you may also pass the builder function
-itself, without calling it. Mark builder functions work similarly, but
-return an object representing a set of nodes rather than a single
-node.
+mark builder. Mark builder functions work similarly, but return an
+object representing a set of nodes rather than a single node.
 
 These builders help specifying and retrieving positions in the
 documents that you created (to avoid needing to count tokens when
@@ -67,15 +65,21 @@ test schema, the module exports the following helpers:
 
 **`a`**: A builder for link marks.
 
-The `dist/build` submodule exports a single function which can be
-called with a schema and an optional object of renamed/configured
-builders to create a object of builders for a custom schema. It will
-return an object with a `schema` property and one builder for each
-node and mark in the schema. The second argument can be used to add
-custom builders—if given, it should be an object mapping names to
-attribute objects, which may contain a `nodeType` or `markType`
-property to specify which node or mark the builder by this name should
-create.
+The package also exports the following helpers:
+
+**`builders`**`(schema: Schema, names?: Object<Attrs>) → Object`
+
+Create a object of builders for a custom schema. Will return an object
+with a `schema` property and one builder for each node and mark in the
+schema. The second argument can be used to add custom builders—if
+given, it should be an object mapping names to attribute objects,
+which may contain a `nodeType` or `markType` property to specify which
+node or mark the builder by this name should create.
+
+**`eq`**`(a, b) → boolean`
+
+Calls `a.eq(b)`. Can be useful to pass as comparison predicate when
+comparing ProseMirror nodes or slices.
 
 ## License
 
