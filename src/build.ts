@@ -65,12 +65,12 @@ function takeAttrs(attrs: Attrs | null, args: [a?: Attrs | ChildSpec, ...b: Chil
   return result
 }
 
-export type NodeBuilder = (attrsOrFirstChild?: Attrs | ChildSpec, ...children: ChildSpec[]) => Node
+export type NodeBuilder = (attrsOrFirstChild?: Attrs | ChildSpec, ...children: ChildSpec[]) => Node & {flat: readonly Node[], tag: Tags}
 export type MarkBuilder = (attrsOrFirstChild?: Attrs | ChildSpec, ...children: ChildSpec[]) => ChildSpec
 
 /// Create a builder function for nodes with content.
 function block(type: NodeType, attrs: Attrs | null = null): NodeBuilder {
-  let result: NodeBuilder = function(...args) {
+  let result = function(...args) {
     let myAttrs = takeAttrs(attrs, args)
     let {nodes, tag} = flatten(type.schema, args as ChildSpec[], id)
     let node = type.create(myAttrs, nodes)
@@ -78,7 +78,7 @@ function block(type: NodeType, attrs: Attrs | null = null): NodeBuilder {
     return node
   }
   if (type.isLeaf) try { (result as any).flat = [type.create(attrs)] } catch(_) {}
-  return result
+  return result as NodeBuilder
 }
 
 // Create a builder function for marks.
