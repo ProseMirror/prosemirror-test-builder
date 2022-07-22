@@ -65,7 +65,7 @@ function takeAttrs(attrs: Attrs | null, args: [a?: Attrs | ChildSpec, ...b: Chil
   return result
 }
 
-export type NodeBuilder = (attrsOrFirstChild?: Attrs | ChildSpec, ...children: ChildSpec[]) => Node & {flat: readonly Node[], tag: Tags}
+export type NodeBuilder = (attrsOrFirstChild?: Attrs | ChildSpec, ...children: ChildSpec[]) => Node & {tag: Tags}
 export type MarkBuilder = (attrsOrFirstChild?: Attrs | ChildSpec, ...children: ChildSpec[]) => ChildSpec
 
 /// Create a builder function for nodes with content.
