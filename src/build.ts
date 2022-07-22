@@ -105,13 +105,13 @@ function mark(type: MarkType, attrs: Attrs | null): MarkBuilder {
 
 export function builders<Nodes extends string = any, Marks extends string = any>(schema: Schema<Nodes, Marks>, names?: {[name: string]: Attrs}) {
   let result = {schema}
-  for (let name in schema.nodes) result[name] = block(schema.nodes[name], {})
-  for (let name in schema.marks) result[name] = mark(schema.marks[name], {})
+  for (let name in schema.nodes) (result as any)[name] = block(schema.nodes[name], {})
+  for (let name in schema.marks) (result as any)[name] = mark(schema.marks[name], {})
 
   if (names) for (let name in names) {
     let value = names[name], typeName = value.nodeType || value.markType || name, type
-    if (type = schema.nodes[typeName]) result[name] = block(type, value)
-    else if (type = schema.marks[typeName]) result[name] = mark(type, value)
+    if (type = schema.nodes[typeName]) (result as any)[name] = block(type, value)
+    else if (type = schema.marks[typeName]) (result as any)[name] = mark(type, value)
   }
   return result as Builders<Schema<Nodes, Marks>>
 }
