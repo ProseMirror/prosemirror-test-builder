@@ -80,7 +80,7 @@ type Builders<S extends Schema> = {
 
 /// Create a builder function for nodes with content.
 function block(type: NodeType, attrs: Attrs | null = null): NodeBuilder {
-  let result = function(...args) {
+  let result = function(...args: any[]) {
     let myAttrs = takeAttrs(attrs, args)
     let {nodes, tag} = flatten(type.schema, args as ChildSpec[], id)
     let node = type.create(myAttrs, nodes)
