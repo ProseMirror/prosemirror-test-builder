@@ -1,6 +1,6 @@
 {
   "name": "prosemirror-test-builder",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Helpers for programatically building ProseMirror test documents",
   "type": "module",
   "main": "dist/index.cjs",

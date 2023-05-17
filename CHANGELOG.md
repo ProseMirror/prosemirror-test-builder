@@ -1,3 +1,11 @@
+## 1.1.1 (2023-05-17)
+
+### Bug fixes
+
+Make the return type of \`builders\` include properties for schema node/mark names.
+
+Include CommonJS type declarations in the package to please new TypeScript resolution settings.
+
 ## 1.1.0 (2022-05-30)
 
 ### New features
