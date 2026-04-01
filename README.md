@@ -1,6 +1,6 @@
 # prosemirror-test-builder
 
-[ [**WEBSITE**](https://prosemirror.net) | [**ISSUES**](https://github.com/prosemirror/prosemirror-test-builder/issues) | [**FORUM**](https://discuss.prosemirror.net) | [**GITTER**](https://gitter.im/ProseMirror/prosemirror) ]
+[ [**WEBSITE**](https://prosemirror.net) | [**ISSUES**](https://code.haverbeke.berlin/prosemirror/prosemirror-test-builder/issues) | [**FORUM**](https://discuss.prosemirror.net) | [**GITTER**](https://gitter.im/ProseMirror/prosemirror) ]
 
 This is a module used to write tests for [ProseMirror](https://prosemirror.net).
 ProseMirror is a well-behaved rich semantic content editor based on
